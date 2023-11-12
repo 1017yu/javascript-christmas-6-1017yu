@@ -5,6 +5,10 @@ const InputView = {
   async readDate() {
     return await Console.readLineAsync(INPUT_MESSAGES.date);
   },
+
+  async readOrder() {
+    return await Console.readLineAsync(INPUT_MESSAGES.order);
+  },
 };
 
 export default InputView;

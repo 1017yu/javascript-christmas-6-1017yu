@@ -1,6 +1,6 @@
 import isValidDate from './index.js';
 
-describe('isValidDate function', () => {
+describe('isValidDate() 유효성 함수 테스트', () => {
   test.each([
     [1, true],
     ['25', true],

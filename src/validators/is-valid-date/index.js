@@ -1,4 +1,4 @@
-import { EVENT_DATES } from '../../constants/system.js';
+import { EVENT_DATES } from '../../constants/events.js';
 
 const isValidDate = input => {
   return (

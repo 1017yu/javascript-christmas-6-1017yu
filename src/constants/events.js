@@ -20,5 +20,12 @@ export const BADGE = Object.freeze({
 export const EVENTS_OPTION = Object.freeze({
   giveaway: 120_000,
   min_order_amount: 10_000,
+  min_order: 1,
   max_order: 20,
+});
+
+export const EVENT_DATES = Object.freeze({
+  startDate: 1,
+  endDate: 31,
+  christmas: 25,
 });

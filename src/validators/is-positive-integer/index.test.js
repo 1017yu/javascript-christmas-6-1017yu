@@ -1,6 +1,6 @@
 import isPositiveInteger from './index.js';
 
-describe('isPositiveInteger function', () => {
+describe('isPositiveInteger() 유효성 함수 테스트', () => {
   test.each([
     [1, true],
     ['25', true],
@@ -12,7 +12,7 @@ describe('isPositiveInteger function', () => {
 
   test.each([
     ['12a3', false],
-    ['12.3.4', false],
+    ['1.0', false],
     ['', false],
     [null, false],
     [undefined, false],

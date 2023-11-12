@@ -1,23 +1,23 @@
 const MENUS = Object.freeze({
   appetizer: {
-    mushroomSoup: 6_000,
-    tapas: 5_500,
-    caesarSalad: 8_000,
+    양송이수프: 6_000,
+    타파스: 5_500,
+    시저샐러드: 8_000,
   },
   main: {
-    tBoneSteak: 55_000,
-    bbqRibs: 54_000,
-    seafoodPasta: 35_000,
-    christmasPasta: 25_000,
+    티본스테이크: 55_000,
+    바비큐립: 54_000,
+    해산물파스타: 35_000,
+    크리스마스파스타: 25_000,
   },
   dessert: {
-    chocolateCake: 15_000,
-    iceCream: 5_000,
+    초코케이크: 15_000,
+    아이스크림: 5_000,
   },
   beverage: {
-    zeroCola: 3_000,
-    redWine: 60_000,
-    champagne: 25_000,
+    제로콜라: 3_000,
+    레드와인: 60_000,
+    샴페인: 25_000,
   },
 });
 

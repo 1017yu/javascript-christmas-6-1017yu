@@ -24,8 +24,7 @@ export const EVENT_TITLE = Object.freeze({
   [MONTH.dec]: '크리스마스',
 });
 
-export const EVENT_DATES = Object.freeze({
-  startDate: 1,
-  endDate: 31,
-  christmas: 25,
+export const SYMBOLS = Object.freeze({
+  comma: ',',
+  dash: '-',
 });

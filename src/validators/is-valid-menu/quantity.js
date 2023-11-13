@@ -1,4 +1,4 @@
-import { EVENTS_OPTION } from '../../constants/events.js';
+import { ORDER } from '../../constants/events.js';
 import { SYMBOLS } from '../../constants/system.js';
 import isPositiveInteger from '../is-positive-integer/index.js';
 
@@ -9,8 +9,7 @@ export const isValidTotalMenuQuantity = input => {
   }, 0);
 
   return (
-    totalQuantity <= EVENTS_OPTION.max_order &&
-    totalQuantity >= EVENTS_OPTION.min_order
+    totalQuantity <= ORDER.maxQuantity && totalQuantity >= ORDER.minQuantity
   );
 };
 

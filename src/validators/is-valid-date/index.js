@@ -1,10 +1,7 @@
-import { EVENT_DATES } from '../../constants/events.js';
+import { DATES } from '../../constants/events.js';
 
 const isValidDate = input => {
-  return (
-    Number(input) <= EVENT_DATES.endDate &&
-    Number(input) >= EVENT_DATES.startDate
-  );
+  return Number(input) <= DATES.endDate && Number(input) >= DATES.startDate;
 };
 
 export default isValidDate;

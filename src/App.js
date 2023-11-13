@@ -8,7 +8,7 @@ class App {
   }
 
   async run() {
-    this.#controller.startPlanner();
+    this.#controller.startPromotion();
   }
 }
 

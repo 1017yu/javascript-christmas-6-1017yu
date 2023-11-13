@@ -1,30 +1,24 @@
-export const MONTH = Object.freeze({
-  jan: '1월',
-  feb: '2월',
-  mar: '3월',
-  apr: '4월',
-  may: '5월',
-  jun: '6월',
-  jul: '7월',
-  aug: '8월',
-  sep: '9월',
-  oct: '10월',
-  nov: '11월',
-  dec: '12월',
-  current: '12',
+export const TIME = Object.freeze({
+  year: '2023',
+  month: '12',
 });
 
-export const YEAR = Object.freeze({
-  current: '2023',
-  next: '2024',
-});
-
-export const EVENT_TITLE = Object.freeze({
-  [MONTH.jan]: '새해',
-  [MONTH.dec]: '크리스마스',
+export const PROMOTION_TITLES = Object.freeze({
+  1: '새해',
+  12: '크리스마스',
 });
 
 export const SYMBOLS = Object.freeze({
   comma: ',',
   dash: '-',
+  colon: ':',
 });
+
+export const UNITS = Object.freeze({
+  quantity: '개',
+  won: '원',
+  month: '월',
+  year: '년',
+});
+
+export const NONE = '없음';

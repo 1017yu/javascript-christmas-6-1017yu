@@ -400,5 +400,161 @@
     "total": 70000,
     "benefit": 2200,
     "payment": 67800
+  },
+  {
+    "user": 67,
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
+  },
+  {
+    "user": 68,
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
+  },
+  {
+    "user": 69,
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
+  },
+  {
+    "user": 70,
+    "total": 70000,
+    "benefit": 2200,
+    "payment": 67800
+  },
+  {
+    "user": 71,
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
+  },
+  {
+    "user": 72,
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
+  },
+  {
+    "user": 73,
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
+  },
+  {
+    "user": 74,
+    "total": 70000,
+    "benefit": 2200,
+    "payment": 67800
+  },
+  {
+    "user": 75,
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
+  },
+  {
+    "user": 76,
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
+  },
+  {
+    "user": 77,
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
+  },
+  {
+    "user": 78,
+    "total": 70000,
+    "benefit": 2200,
+    "payment": 67800
+  },
+  {
+    "user": 79,
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
+  },
+  {
+    "user": 80,
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
+  },
+  {
+    "user": 81,
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
+  },
+  {
+    "user": 82,
+    "total": 70000,
+    "benefit": 2200,
+    "payment": 67800
+  },
+  {
+    "user": 83,
+    "total": 15000,
+    "benefit": 4223,
+    "payment": 10777
+  },
+  {
+    "user": 84,
+    "total": 145000,
+    "benefit": 29223,
+    "payment": 140777
+  },
+  {
+    "user": 85,
+    "total": 145000,
+    "benefit": 29223,
+    "payment": 140777
+  },
+  {
+    "user": 86,
+    "total": 145000,
+    "benefit": 29223,
+    "payment": 140777
+  },
+  {
+    "user": 87,
+    "total": 145000,
+    "benefit": 29223,
+    "payment": 140777
+  },
+  {
+    "user": 88,
+    "total": 145000,
+    "benefit": 29223,
+    "payment": 140777
+  },
+  {
+    "user": 89,
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
+  },
+  {
+    "user": 90,
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
+  },
+  {
+    "user": 91,
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
+  },
+  {
+    "user": 92,
+    "total": 70000,
+    "benefit": 2200,
+    "payment": 67800
   }
 ]

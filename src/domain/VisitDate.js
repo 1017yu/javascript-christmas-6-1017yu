@@ -21,6 +21,7 @@ class VisitDate {
     return this.#calculateDayIndex();
   }
 
+  // 이벤트 연-월의 방문 날짜를 계산하여 요일 인덱스를 반환
   #calculateDayIndex() {
     const date = new Date(`${TIME.dateFormat}${this.#visitDate}`);
 

@@ -16,15 +16,30 @@ class Order {
     this.#orderList = this.#parse(orderInput);
   }
 
+  /**
+   * 사용자 입력한 주문 메뉴와 메뉴 개수를 파싱하여 배열로 반환
+   * @param {string} orderInput - 사용자가 입력한 모든 주문 메뉴와 메뉴 개수
+   * @returns {{ key: string, value: string }[]} - 주문이 파싱된 배열
+   */
   #parse(orderInput) {
     this.#splitOrder(orderInput);
+
     return Array.from(this.#orderList);
   }
 
+  /**
+   * orderInput 내 개별 주문들을 파싱
+   * @param {string} orderInput - 사용자가 입력한 모든 주문 메뉴와 메뉴 개수
+   * @returns {Set<{ menu: string, quantity: number }>} - 주문이 파싱된 Set
+   */
   #splitOrder(orderInput) {
     return orderInput.split(SYMBOLS.comma).map(order => this.#splitMenu(order));
   }
 
+  /**
+   * 주문 메뉴명과 개수를 orderList Set에 추가
+   * @param {string} order 사용자가 입력한 특정 주문 메뉴와 메뉴 개수
+   */
   #splitMenu(order) {
     const [menu, quantity] = order.split(SYMBOLS.dash);
 

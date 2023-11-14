@@ -1,6 +1,7 @@
 export const TIME = Object.freeze({
   year: '2023',
   month: '12',
+  dateFormat: `2023-12-`,
 });
 
 export const PROMOTION_TITLES = Object.freeze({

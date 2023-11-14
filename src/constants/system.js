@@ -24,3 +24,5 @@ export const UNITS = Object.freeze({
 });
 
 export const NONE = '없음';
+
+export const FILE_PATH = 'src/data/dec-promotion.json';

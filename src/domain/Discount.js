@@ -81,7 +81,7 @@ class Discount {
     this.#daysOfWeekDiscount();
     this.#specialDiscount();
 
-    return Array.from(this.#discounts);
+    return [...this.#discounts];
   }
 
   getTotalDiscountPrice() {

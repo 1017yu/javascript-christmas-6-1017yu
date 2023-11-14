@@ -24,7 +24,7 @@ class Order {
   #parse(orderInput) {
     this.#splitOrder(orderInput);
 
-    return Array.from(this.#orderList);
+    return [...this.#orderList];
   }
 
   /**

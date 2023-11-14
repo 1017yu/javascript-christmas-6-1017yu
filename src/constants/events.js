@@ -1,18 +1,16 @@
-import { NONE, PROMOTION_TITLES, TIME, UNITS } from './system.js';
+import { PROMOTION_TITLES, TIME, UNITS } from './system.js';
 
 export const DISCOUNT_PRICES = Object.freeze({
   dDay: 1_000,
   dDayInc: 100,
   week: 2_023,
   special: 1_000,
-  none: NONE,
 });
 
 export const BADGES = Object.freeze({
   star: { title: '별', price: 5_000 },
   tree: { title: '트리', price: 10_000 },
   santa: { title: '산타', price: 20_000 },
-  none: NONE,
 });
 
 export const TITLES = Object.freeze({
@@ -27,7 +25,6 @@ export const GIVEAWAYS = Object.freeze({
   giveaway: '샴페인',
   giveawayUnit: 1,
   giveawayPrice: 120_000,
-  none: NONE,
 });
 
 export const ORDER = Object.freeze({
@@ -46,7 +43,7 @@ export const DATES = Object.freeze({
 
 export const BENEFITS = Object.freeze({
   menu: '<주문 메뉴>',
-  preDiscount: '<할인 전 총주문 금액>',
+  preTotalPrice: '<할인 전 총주문 금액>',
   giveaway: '<증정 메뉴>',
   benefitList: '<혜택 내역>',
   totalBenefitPrice: '<총혜택 금액>',

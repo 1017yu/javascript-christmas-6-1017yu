@@ -25,7 +25,6 @@ class EventController {
     const visitDate = await this.#requestVisitDate();
     const orderList = await this.#requestOrderList();
 
-    this.#outputView.printOutro(visitDate);
     this.#eventPlanner = this.#showEventPlanner(visitDate, orderList);
     this.#saveResult(this.#eventPlanner);
   }
@@ -70,6 +69,7 @@ class EventController {
    * @returns
    */
   #showEventPlanner(visitDate, orderList) {
+    this.#outputView.printOutro(visitDate);
     this.#eventPlanner = new EventPlanner(visitDate, this.#dayIndex, orderList);
     this.#outputView.printPlanner(orderList, this.#eventPlanner);
 

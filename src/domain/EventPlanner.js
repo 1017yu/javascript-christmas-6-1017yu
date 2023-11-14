@@ -1,104 +1,88 @@
-import {
-  BADGES,
-  DISCOUNT_PRICES,
-  GIVEAWAYS,
-  TITLES,
-} from '../constants/events.js';
-import MENUS from '../constants/menus.js';
+import { BADGES, DISCOUNT_PRICES, GIVEAWAYS } from '../constants/events.js';
+import { NONE } from '../constants/system.js';
+import menuPriceFinder from '../utils/menuPriceFinder.js';
+import Benefit from './Benefit.js';
 import Discount from './Discount.js';
 
 class EventPlanner {
-  #isFitGiveaway;
-
-  #discount;
-
-  #benefitList;
+  #benefit;
 
   #preTotalPrice;
 
   #totalBenefitPrice;
 
-  /**
-   *
-   * @param {string} visitDate - 방문 날짜
-   * @param {number} dayIndex - 방문 날짜의 요일 인덱스
-   * @param {Array<{ menu: string, quantity: number }>} orderList - 주문 목록 배열
-   */
   constructor(visitDate, dayIndex, orderList) {
-    this.visitDate = visitDate;
-    this.#discount = new Discount(visitDate, dayIndex, orderList);
-    this.#setPreTotalPrice(orderList);
-    this.#checkIsFitGiveAway();
-    this.#setBenefitList();
+    this.discount = new Discount(visitDate, dayIndex, orderList);
+    this.#preTotalPrice = this.#setPreTotalPrice(orderList);
+    this.isFitGiveaway = this.#checkIsFitGiveAway();
+    this.#benefit = new Benefit(this.discount, this.isFitGiveaway);
   }
 
+  /**
+   * 주문 내역을 순회하며 할인 전 총주문 금액을 반환
+   * @param {Array<{ menu: string, quantity: number }>} orderList - 주문 내역
+   * @returns
+   */
   #setPreTotalPrice(orderList) {
-    this.#preTotalPrice = orderList.reduce(
+    return orderList.reduce(
       (acc, order) => this.#calculateTotalPrice(acc, order),
       0,
     );
   }
 
-  #checkIsFitGiveAway() {
-    this.#isFitGiveaway = this.#preTotalPrice > GIVEAWAYS.giveawayPrice;
+  /**
+   * 특정 메뉴의 가격과 수량을 곱하여 할인 전 총주문 금액을 계산
+   * @param {number} acc - 누적 금액
+   * @param {{ menu: string, quantity: number }} order - 특정 주문 내역
+   * @returns
+   */
+  #calculateTotalPrice(acc, order) {
+    const price = menuPriceFinder(order.menu);
+
+    return acc + price * order.quantity;
   }
 
   getPreTotalPrice() {
     return this.#preTotalPrice;
   }
 
-  #calculateTotalPrice(acc, order) {
-    const price = this.#getMenuPrice(order.menu);
-
-    return acc + price * order.quantity;
+  // 할인 전 총주문 금액과 증정 이벤트 기준 금액을 비교하여 boolean 반환
+  #checkIsFitGiveAway() {
+    return this.#preTotalPrice >= GIVEAWAYS.giveawayPrice;
   }
 
-  #getMenuPrice(menu) {
-    return Object.values(MENUS).find(category => menu in category)[menu];
-  }
-
+  // 증정 이벤트 기준 금액 이상이면 증정 이벤트 상품 반환, 미만이면 '없음' 반환
   getGiveaway() {
-    const { giveaway, giveawayUnit, none } = GIVEAWAYS;
-
-    return this.#isFitGiveaway
-      ? [{ menu: giveaway, quantity: giveawayUnit }]
-      : none;
+    return this.isFitGiveaway ? [this.#createGiveaway()] : NONE;
   }
 
-  #setBenefitList() {
-    this.#benefitList = this.#discount.getDiscounts(this.#preTotalPrice);
-
-    if (this.#isFitGiveaway) {
-      this.#benefitList.push({
-        title: TITLES.giveaway,
-        price: this.#getMenuPrice(GIVEAWAYS.giveaway),
-      });
-    }
+  #createGiveaway() {
+    return { menu: GIVEAWAYS.giveaway, quantity: GIVEAWAYS.giveawayUnit };
   }
 
   getBenefitList() {
-    return this.#benefitList.length ? this.#benefitList : DISCOUNT_PRICES.none;
+    return this.#benefit.getList();
   }
 
   getTotalBenefitPrice() {
-    if (this.#benefitList === DISCOUNT_PRICES.none) return 0;
-
-    this.#totalBenefitPrice = this.#benefitList.reduce(
-      (acc, benefit) => acc + benefit.price,
-      0,
-    );
-
-    return this.#totalBenefitPrice;
+    return this.#benefit.getTotalPrice();
   }
 
+  /**
+   * 총 할인 금액이 존재하면 할인 후 예상 결제 금액 반환, 그렇지 않다면 할인 전 총주문 금액 반환
+   * @returns
+   */
   getTotalPrice() {
-    const totalDiscountPrice = this.#discount.getTotalDiscountPrice();
+    const totalDiscountPrice = this.discount.getTotalDiscountPrice();
 
     if (totalDiscountPrice === DISCOUNT_PRICES.none) return this.#preTotalPrice;
-
     return this.#preTotalPrice - totalDiscountPrice;
   }
 
+  /**
+   * 총혜택 금액에 따른 이벤트 배지 반환
+   * @returns
+   */
   getBadge() {
     switch (true) {
       case this.#totalBenefitPrice > BADGES.santa.price:

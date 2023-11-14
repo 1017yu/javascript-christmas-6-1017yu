@@ -1,4 +1,3 @@
-import { EOL as LINE_SEPARATOR } from 'os';
 import { Console } from '@woowacourse/mission-utils';
 import { OUTPUT_MESSAGES } from '../constants/messages.js';
 import { NONE, SYMBOLS, TIME, UNITS } from '../constants/system.js';
@@ -11,18 +10,16 @@ const OutputView = {
   },
 
   printIntro() {
-    Console.print(OUTPUT_MESSAGES.intro);
+    this.print(OUTPUT_MESSAGES.intro);
   },
 
   printOutro(date) {
-    Console.print(
-      `${TIME.month}${UNITS.month} ${date}${OUTPUT_MESSAGES.outro}${LINE_SEPARATOR}`,
-    );
+    this.print(`${TIME.month}${UNITS.month} ${date}${OUTPUT_MESSAGES.outro}\n`);
   },
 
   printPlanner(orderList, planner) {
     this.printOrderList(BENEFITS.menu, orderList);
-    this.printPrice(BENEFITS.preDiscount, planner.getPreTotalPrice());
+    this.printPrice(BENEFITS.preTotalPrice, planner.getPreTotalPrice());
     this.printOrderList(BENEFITS.giveaway, planner.getGiveaway());
     this.printBenefitList(BENEFITS.benefitList, planner.getBenefitList());
     this.printBenefitPrice(
@@ -34,48 +31,43 @@ const OutputView = {
   },
 
   printOrderList(title, orderList) {
+    this.printList(title, orderList, order => {
+      return `${order.menu} ${order.quantity}${UNITS.quantity}`;
+    });
+  },
+
+  printBenefitList(title, benefitList) {
+    this.printList(title, benefitList, benefit => {
+      return `${benefit.title}${SYMBOLS.colon} ${SYMBOLS.dash}${priceFormatter(
+        benefit.price,
+      )}`;
+    });
+  },
+
+  printList(title, list, message) {
     this.print(`${title}`);
 
-    if (orderList === NONE) this.print(NONE);
-    if (orderList !== NONE) {
-      orderList.forEach(order => {
-        this.print(`${order.menu} ${order.quantity}${UNITS.quantity}`);
-      });
-    }
-    this.print(SYMBOLS.blank);
+    if (list === NONE) return this.print(NONE, SYMBOLS.blank);
+
+    list.forEach(item => {
+      this.print(message(item));
+    });
+
+    return this.print(SYMBOLS.blank);
   },
 
   printPrice(title, price) {
-    this.print(
-      `${title}${LINE_SEPARATOR}${priceFormatter(price)}${LINE_SEPARATOR}`,
-    );
+    this.print(`${title}\n${priceFormatter(price)}\n`);
   },
 
   printBenefitPrice(title, price) {
     const isNone = price ? SYMBOLS.dash : SYMBOLS.blank;
 
-    this.print(`${title}`);
-    this.print(`${isNone}${priceFormatter(price)}${LINE_SEPARATOR}`);
-  },
-
-  printBenefitList(title, benefitList) {
-    const { colon, dash } = SYMBOLS;
-    this.print(`${title}`);
-
-    if (benefitList === NONE) this.print(NONE);
-    if (benefitList !== NONE) {
-      benefitList.forEach(order => {
-        this.print(
-          `${order.title}${colon} ${dash}${priceFormatter(order.price)}`,
-        );
-      });
-    }
-    this.print(SYMBOLS.blank);
+    this.print(`${title}\n${isNone}${priceFormatter(price)}\n`);
   },
 
   printBadge(title, badge) {
-    this.print(`${title}`);
-    this.print(`${badge}`);
+    this.print(`${title}\n${badge}`);
   },
 };
 

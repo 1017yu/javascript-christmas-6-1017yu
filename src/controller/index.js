@@ -17,7 +17,7 @@ class PromotionController {
   }
 
   async startPromotion() {
-    this.#outputView.printIntro();
+    this.#outputView.printIntro(this.#visitDate);
     const dayIndex = await this.#requestVisitDate();
     const orderList = await this.#requestOrder();
     this.#outputView.printOutro(this.#visitDate);
@@ -50,6 +50,7 @@ class PromotionController {
 
   #showBenefits(visitDate, dayIndex, orderList) {
     const eventPlanner = new EventPlanner(visitDate, dayIndex, orderList);
+    this.#outputView.printPlanner(orderList, eventPlanner);
   }
 }
 

@@ -8,11 +8,15 @@ import MENUS from '../constants/menus.js';
 import Discount from './Discount.js';
 
 class EventPlanner {
-  #orderList;
-
   #isFitGiveaway;
 
   #discount;
+
+  #benefitList;
+
+  #preTotalPrice;
+
+  #totalBenefitPrice;
 
   /**
    *
@@ -22,88 +26,25 @@ class EventPlanner {
    */
   constructor(visitDate, dayIndex, orderList) {
     this.visitDate = visitDate;
-    this.dayIndex = dayIndex;
-    this.#orderList = orderList;
     this.#discount = new Discount(visitDate, dayIndex, orderList);
+    this.#setPreTotalPrice(orderList);
+    this.#checkIsFitGiveAway();
+    this.#setBenefitList();
   }
 
-  getPlanner() {
-    const preTotalPrice = this.#getPreTotalPrice();
-    const benefitList = this.#getBenefitList(preTotalPrice);
-    const totalBenefitPrice = this.#getTotalBenefitPrice(benefitList);
-
-    return [
-      preTotalPrice,
-      this.#getGiveawayEvent(),
-      benefitList,
-      this.#getTotalBenefitPrice(benefitList),
-      this.#getTotalPrice(preTotalPrice),
-      this.#getBadge(totalBenefitPrice),
-    ];
-  }
-
-  #getPreTotalPrice() {
-    const preTotalPrice = this.#orderList.reduce(
+  #setPreTotalPrice(orderList) {
+    this.#preTotalPrice = orderList.reduce(
       (acc, order) => this.#calculateTotalPrice(acc, order),
       0,
     );
-
-    this.#isFitGiveaway = preTotalPrice > GIVEAWAYS.giveawayPrice;
-
-    return preTotalPrice;
   }
 
-  #getGiveawayEvent() {
-    const { giveaway, giveawayUnit, none } = GIVEAWAYS;
-
-    return this.#isFitGiveaway
-      ? Array({ menu: giveaway, quantity: giveawayUnit })
-      : none;
+  #checkIsFitGiveAway() {
+    this.#isFitGiveaway = this.#preTotalPrice > GIVEAWAYS.giveawayPrice;
   }
 
-  #getBenefitList(preTotalPrice) {
-    const benefitList = this.#discount.getDiscounts(preTotalPrice);
-
-    if (this.#isFitGiveaway) {
-      benefitList.push({
-        title: TITLES.giveaway,
-        price: this.#getMenuPrice(GIVEAWAYS.giveaway),
-      });
-    }
-
-    return benefitList.length ? benefitList : DISCOUNT_PRICES.none;
-  }
-
-  #getTotalBenefitPrice(benefitList) {
-    if (benefitList === DISCOUNT_PRICES.none) return 0;
-
-    const totalBenefitPrice = benefitList.reduce(
-      (acc, benefit) => acc + benefit.price,
-      0,
-    );
-
-    return totalBenefitPrice;
-  }
-
-  #getTotalPrice(preTotalPrice) {
-    const totalDiscountPrice = this.#discount.getTotalDiscountPrice();
-
-    if (totalDiscountPrice === DISCOUNT_PRICES.none) return preTotalPrice;
-
-    return preTotalPrice - totalDiscountPrice;
-  }
-
-  #getBadge(totalBenefitPrice) {
-    switch (true) {
-      case totalBenefitPrice > BADGES.santa.price:
-        return BADGES.santa.title;
-      case totalBenefitPrice > BADGES.tree.price:
-        return BADGES.tree.title;
-      case totalBenefitPrice > BADGES.star.price:
-        return BADGES.star.title;
-      default:
-        return BADGES.none;
-    }
+  getPreTotalPrice() {
+    return this.#preTotalPrice;
   }
 
   #calculateTotalPrice(acc, order) {
@@ -114,6 +55,61 @@ class EventPlanner {
 
   #getMenuPrice(menu) {
     return Object.values(MENUS).find(category => menu in category)[menu];
+  }
+
+  getGiveaway() {
+    const { giveaway, giveawayUnit, none } = GIVEAWAYS;
+
+    return this.#isFitGiveaway
+      ? [{ menu: giveaway, quantity: giveawayUnit }]
+      : none;
+  }
+
+  #setBenefitList() {
+    this.#benefitList = this.#discount.getDiscounts(this.#preTotalPrice);
+
+    if (this.#isFitGiveaway) {
+      this.#benefitList.push({
+        title: TITLES.giveaway,
+        price: this.#getMenuPrice(GIVEAWAYS.giveaway),
+      });
+    }
+  }
+
+  getBenefitList() {
+    return this.#benefitList.length ? this.#benefitList : DISCOUNT_PRICES.none;
+  }
+
+  getTotalBenefitPrice() {
+    if (this.#benefitList === DISCOUNT_PRICES.none) return 0;
+
+    this.#totalBenefitPrice = this.#benefitList.reduce(
+      (acc, benefit) => acc + benefit.price,
+      0,
+    );
+
+    return this.#totalBenefitPrice;
+  }
+
+  getTotalPrice() {
+    const totalDiscountPrice = this.#discount.getTotalDiscountPrice();
+
+    if (totalDiscountPrice === DISCOUNT_PRICES.none) return this.#preTotalPrice;
+
+    return this.#preTotalPrice - totalDiscountPrice;
+  }
+
+  getBadge() {
+    switch (true) {
+      case this.#totalBenefitPrice > BADGES.santa.price:
+        return BADGES.santa.title;
+      case this.#totalBenefitPrice > BADGES.tree.price:
+        return BADGES.tree.title;
+      case this.#totalBenefitPrice > BADGES.star.price:
+        return BADGES.star.title;
+      default:
+        return BADGES.none;
+    }
   }
 }
 

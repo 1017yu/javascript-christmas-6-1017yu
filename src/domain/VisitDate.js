@@ -1,5 +1,5 @@
 import { ERROR_MESSAGES } from '../constants/messages.js';
-import { TIME } from '../constants/system.js';
+import { SYMBOLS, TIME } from '../constants/system.js';
 import validationErrorHandler from '../errors/index.js';
 import { isPositiveInteger, isValidDate } from '../validators/index.js';
 
@@ -22,7 +22,11 @@ class VisitDate {
   }
 
   #calculateDayIndex() {
-    const date = new Date(`${TIME.year}-${TIME.month}-${this.#visitDate}`);
+    const date = new Date(
+      `${TIME.year}${SYMBOLS.dash}${TIME.month}${SYMBOLS.dash}${
+        this.#visitDate
+      }`,
+    );
 
     return date.getDay();
   }

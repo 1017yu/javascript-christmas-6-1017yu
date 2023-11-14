@@ -8,7 +8,7 @@ class App {
   }
 
   async run() {
-    this.#controller.startPromotion();
+    await this.#controller.startPromotion();
   }
 }
 

@@ -1,3 +1,4 @@
+import { EOL as LINE_SEPARATOR } from 'os';
 import { TIME, UNITS } from './system.js';
 
 export const OUTPUT_MESSAGES = Object.freeze({
@@ -6,8 +7,8 @@ export const OUTPUT_MESSAGES = Object.freeze({
 });
 
 export const INPUT_MESSAGES = Object.freeze({
-  date: `${TIME.month}${UNITS.month} 중 식당 예상 방문 날짜는 언제인가요? (숫자만 입력해 주세요!)\n`,
-  order: `주문하실 메뉴를 메뉴와 개수를 알려 주세요. (e.g. 해산물파스타-2,레드와인-1,초코케이크-1)\n`,
+  date: `${TIME.month}${UNITS.month} 중 식당 예상 방문 날짜는 언제인가요? (숫자만 입력해 주세요!)${LINE_SEPARATOR}`,
+  order: `주문하실 메뉴를 메뉴와 개수를 알려 주세요. (e.g. 해산물파스타-2,레드와인-1,초코케이크-1)${LINE_SEPARATOR}`,
 });
 
 export const ERROR_MESSAGES = Object.freeze({

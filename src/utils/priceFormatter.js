@@ -1,5 +1,9 @@
+import { UNITS } from '../constants/system.js';
+
 const priceFormatter = number => {
-  return new Intl.NumberFormat().format(number).toString();
+  const price = new Intl.NumberFormat().format(number).toString();
+
+  return `${price}${UNITS.won}`;
 };
 
 export default priceFormatter;

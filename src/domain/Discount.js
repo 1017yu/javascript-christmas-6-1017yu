@@ -35,7 +35,7 @@ class Discount {
   }
 
   #daysOfWeekDiscount() {
-    const isWeekend = this.#dayIndex >= 5;
+    const isWeekend = this.#dayIndex >= DATES.weekendIndex;
     let amount = 0;
 
     this.#orderList.forEach(order => {
@@ -44,9 +44,17 @@ class Discount {
       amount += this.#calculateDaysOfWeek(menu, price, isWeekend);
     });
 
-    return isWeekend
-      ? this.#discounts.add({ title: TITLES.weekend, price: amount })
-      : this.#discounts.add({ title: TITLES.weekday, price: amount });
+    return this.#addDaysOfWeekDiscount(isWeekend, amount);
+  }
+
+  #addDaysOfWeekDiscount(isWeekend, amount) {
+    if (isWeekend && amount) {
+      this.#discounts.add({ title: TITLES.weekend, price: amount });
+    }
+    if (!isWeekend && amount) {
+      this.#discounts.add({ title: TITLES.weekday, price: amount });
+    }
+    return null;
   }
 
   #calculateDaysOfWeek(menu, price, isWeekend) {

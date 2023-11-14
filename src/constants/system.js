@@ -12,6 +12,7 @@ export const SYMBOLS = Object.freeze({
   comma: ',',
   dash: '-',
   colon: ':',
+  blank: '',
 });
 
 export const UNITS = Object.freeze({

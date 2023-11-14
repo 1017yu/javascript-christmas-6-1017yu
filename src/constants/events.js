@@ -1,4 +1,4 @@
-import { NONE, PROMOTION_TITLES, TIME } from './system.js';
+import { NONE, PROMOTION_TITLES, TIME, UNITS } from './system.js';
 
 export const DISCOUNT_PRICES = Object.freeze({
   dDay: 1_000,
@@ -9,9 +9,9 @@ export const DISCOUNT_PRICES = Object.freeze({
 });
 
 export const BADGES = Object.freeze({
-  star: { title: 'star', price: 5_000 },
-  tree: { title: 'tree', price: 10_000 },
-  santa: { title: 'santa', price: 20_000 },
+  star: { title: '별', price: 5_000 },
+  tree: { title: '트리', price: 10_000 },
+  santa: { title: '산타', price: 20_000 },
   none: NONE,
 });
 
@@ -41,4 +41,15 @@ export const DATES = Object.freeze({
   endDate: 31,
   christmas: 25,
   specialDayIndex: 0,
+  weekendIndex: 5,
+});
+
+export const BENEFITS = Object.freeze({
+  menu: '<주문 메뉴>',
+  preDiscount: '<할인 전 총주문 금액>',
+  giveaway: '<증정 메뉴>',
+  benefitList: '<혜택 내역>',
+  totalBenefitPrice: '<총혜택 금액>',
+  totalPrice: '<할인 후 예상 결제 금액>',
+  badge: `<${TIME.month}${UNITS.month} 이벤트 배지>`,
 });

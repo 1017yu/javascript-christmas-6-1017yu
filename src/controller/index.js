@@ -3,6 +3,7 @@ import Order from '../domain/Order.js';
 import InputView from '../views/InputView.js';
 import OutputView from '../views/OutputView.js';
 import EventPlanner from '../domain/EventPlanner.js';
+import Save from '../domain/Save.js';
 
 class PromotionController {
   #inputView;
@@ -21,7 +22,7 @@ class PromotionController {
     const dayIndex = await this.#requestVisitDate();
     const orderList = await this.#requestOrder();
     this.#outputView.printOutro(this.#visitDate);
-    this.#showBenefits(this.#visitDate, dayIndex, orderList);
+    this.#showPlanner(this.#visitDate, dayIndex, orderList);
   }
 
   async #requestVisitDate() {
@@ -48,9 +49,15 @@ class PromotionController {
     }
   }
 
-  #showBenefits(visitDate, dayIndex, orderList) {
+  #showPlanner(visitDate, dayIndex, orderList) {
     const eventPlanner = new EventPlanner(visitDate, dayIndex, orderList);
     this.#outputView.printPlanner(orderList, eventPlanner);
+
+    this.#saveResult(eventPlanner);
+  }
+
+  #saveResult(eventPlanner) {
+    new Save(eventPlanner);
   }
 }
 

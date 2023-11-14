@@ -1,0 +1,212 @@
+[
+  {
+    "user": 0,
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
+  },
+  {
+    "user": 1,
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
+  },
+  {
+    "user": 2,
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
+  },
+  {
+    "user": 3,
+    "total": 70000,
+    "benefit": 2200,
+    "payment": 67800
+  },
+  {
+    "user": 4,
+    "total": 177000,
+    "benefit": 28423,
+    "payment": 173577
+  },
+  {
+    "user": 5,
+    "total": 225000,
+    "benefit": 29223,
+    "payment": 220777
+  },
+  {
+    "user": 6,
+    "total": 182000,
+    "benefit": 32446,
+    "payment": 174554
+  },
+  {
+    "user": 7,
+    "total": 129000,
+    "benefit": 29300,
+    "payment": 124700
+  },
+  {
+    "user": 8,
+    "total": 204000,
+    "benefit": 28400,
+    "payment": 200600
+  },
+  {
+    "user": 9,
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
+  },
+  {
+    "user": 10,
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
+  },
+  {
+    "user": 11,
+    "total": 70000,
+    "benefit": 2200,
+    "payment": 67800
+  },
+  {
+    "user": 12,
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
+  },
+  {
+    "user": 13,
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
+  },
+  {
+    "user": 14,
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
+  },
+  {
+    "user": 15,
+    "total": 70000,
+    "benefit": 2200,
+    "payment": 67800
+  },
+  {
+    "user": 16,
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
+  },
+  {
+    "user": 17,
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
+  },
+  {
+    "user": 18,
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
+  },
+  {
+    "user": 19,
+    "total": 70000,
+    "benefit": 2200,
+    "payment": 67800
+  },
+  {
+    "user": 20,
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
+  },
+  {
+    "user": 21,
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
+  },
+  {
+    "user": 22,
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
+  },
+  {
+    "user": 23,
+    "total": 70000,
+    "benefit": 2200,
+    "payment": 67800
+  },
+  {
+    "user": 24,
+    "total": 162000,
+    "benefit": 28400,
+    "payment": 158600
+  },
+  {
+    "user": 25,
+    "total": 69000,
+    "benefit": 5123,
+    "payment": 63877
+  },
+  {
+    "user": 26,
+    "total": 134000,
+    "benefit": 29423,
+    "payment": 129577
+  },
+  {
+    "user": 27,
+    "total": 1080000,
+    "benefit": 28400,
+    "payment": 1076600
+  },
+  {
+    "user": 28,
+    "total": 165000,
+    "benefit": 26000,
+    "payment": 164000
+  },
+  {
+    "user": 29,
+    "total": 648000,
+    "benefit": 51076,
+    "payment": 621924
+  },
+  {
+    "user": 30,
+    "total": 1100000,
+    "benefit": 28400,
+    "payment": 1096600
+  },
+  {
+    "user": 31,
+    "total": 300000,
+    "benefit": 65460,
+    "payment": 259540
+  },
+  {
+    "user": 32,
+    "total": 80000,
+    "benefit": 2900,
+    "payment": 77100
+  },
+  {
+    "user": 33,
+    "total": 96000,
+    "benefit": 3600,
+    "payment": 92400
+  },
+  {
+    "user": 34,
+    "total": 45000,
+    "benefit": 2400,
+    "payment": 42600
+  }
+]

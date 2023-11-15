@@ -1,4 +1,3 @@
-/* eslint-disable max-lines-per-function */
 import { ERROR_MESSAGES } from '../../src/constants/messages.js';
 import Order from '../../src/domain/Order.js';
 

@@ -1,4 +1,3 @@
-/* eslint-disable max-lines-per-function */
 import { TITLES } from '../../src/constants/events';
 import { NONE } from '../../src/constants/system';
 import EventPlanner from '../../src/domain/EventPlanner';

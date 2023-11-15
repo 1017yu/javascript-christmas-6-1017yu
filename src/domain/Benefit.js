@@ -3,18 +3,15 @@ import { NONE } from '../constants/system.js';
 import menuPriceFinder from '../utils/menuPriceFinder.js';
 
 class Benefit {
-  #discount;
-
   #isFitGiveaway;
 
   #benefitList;
 
   #totalPrice;
 
-  constructor(discount, isFitGiveaway) {
-    this.#discount = discount;
+  constructor(discountList, isFitGiveaway) {
     this.#isFitGiveaway = isFitGiveaway;
-    this.#benefitList = this.#setBenefitList(this.#discount.getDiscounts());
+    this.#benefitList = this.#setBenefitList(discountList);
     this.#totalPrice = this.#calculateTotalPrice();
   }
 
@@ -23,13 +20,12 @@ class Benefit {
    * @param {Array<{ title: string, price: number }>} benefitList - 혜택 리스트
    * @returns
    */
-  #setBenefitList(benefitList) {
+  #setBenefitList(discountList) {
     if (this.#isFitGiveaway) {
-      benefitList.push(this.#createGiveawayBenefit());
-      return benefitList;
+      return [...discountList, this.#createGiveawayBenefit()];
     }
 
-    return NONE;
+    return discountList;
   }
 
   #createGiveawayBenefit() {

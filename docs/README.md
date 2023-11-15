@@ -59,17 +59,21 @@
 
 ### phase-1
 
+- [x] 리팩토링 목록 구성
+
+### phase-2
+
 - [x] Date 포맷 연-월 상수화
 - [x] 방문 날짜 입력 요청 메소드 반환 값 변수명 변경
 - [x] 불필요한 `toString()` 제거
 
-### phase-2
+### phase-3
 
 - [x] JSDoc 주석 추가
 - [x] 방문 날짜 입력 요청 메소드 반환 값 변수명 변경
 - [x] 불필요한 `toString()` 제거
 
-### phase-3
+### phase-4
 
 - [x]`EventPlanner` 클래스 책임 분리
 
@@ -80,6 +84,23 @@
 - [x] `OutputView` 로직 리팩토링
 - [x] `Save` JSDoc 작성
 - [x] 상수 정리
+
+### phase-5
+
+- [x] `Benefit` 리팩토링
+
+  - [x] `#setBenefitList` 배열 push 방식에서 구조 분해로 가독성 증진
+  - [x] `Discount` 클래스 인스턴스가 아닌 할인 목록을 받아와 가독성 증진
+  - [x] `BenefitTest` 테스트 코드 추가
+
+- [x] `EventPlanner` 리팩토링
+
+  - [x] Badge Switch문 default `undefined` 반환 오류 수정
+  - [x] `Benefit` 인스턴스 생성 시, 할인 목록을 직접 받아와서 인자로 넘기는 방식
+  - [x] `getTotalBenefitPrice()` 최종 결제 금액을 프라이빗 멤버 변수에 저장하고 return
+
+- [x] `Save` 리팩토링
+  - [x] `배지는 2024 새해 이벤트에서 활용할 예정...` 👉🏻 유저의 배지도 함께 저장
 
 ## 🎄 '12월 이벤트 플래너' 개발 요청 사항 이행 목록
 

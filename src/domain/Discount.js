@@ -77,6 +77,7 @@ class Discount {
 
   getDiscounts(preTotalPrice) {
     if (preTotalPrice < ORDER.minPrice) return NONE;
+
     this.#dDayDiscount();
     this.#daysOfWeekDiscount();
     this.#specialDiscount();
@@ -89,8 +90,6 @@ class Discount {
       (acc, benefit) => acc + benefit.price,
       0,
     );
-
-    if (totalDiscountPrice === DISCOUNT_PRICES.none) return 0;
 
     return totalDiscountPrice;
   }

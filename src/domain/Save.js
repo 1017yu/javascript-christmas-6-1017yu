@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { FILE_PATH } from '../constants/system';
+import { FILE_PATH } from '../constants/system.js';
 
 class Save {
   #eventPlanner;
@@ -17,6 +17,7 @@ class Save {
     const readData = this.#readData();
     const userData = {
       user: readData.length,
+      badge: this.#eventPlanner.getBadge(),
       total: this.#eventPlanner.getPreTotalPrice(),
       benefit: this.#eventPlanner.getTotalBenefitPrice(),
       payment: this.#eventPlanner.getTotalPrice(),

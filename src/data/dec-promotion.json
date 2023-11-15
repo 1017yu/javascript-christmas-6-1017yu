@@ -1,558 +1,658 @@
 [
   {
     "user": 0,
+    "badge": "산타",
     "total": 142000,
     "benefit": 31246,
     "payment": 135754
   },
   {
     "user": 1,
+    "badge": "없음",
     "total": 8500,
     "benefit": 0,
     "payment": 8500
   },
   {
     "user": 2,
+    "badge": "별",
     "total": 70000,
     "benefit": 5046,
     "payment": 64954
   },
   {
     "user": 3,
+    "badge": "없음",
     "total": 70000,
     "benefit": 2200,
     "payment": 67800
   },
   {
     "user": 4,
-    "total": 177000,
-    "benefit": 28423,
-    "payment": 173577
-  },
-  {
-    "user": 5,
-    "total": 225000,
-    "benefit": 29223,
-    "payment": 220777
-  },
-  {
-    "user": 6,
-    "total": 182000,
-    "benefit": 32446,
-    "payment": 174554
-  },
-  {
-    "user": 7,
-    "total": 129000,
-    "benefit": 29300,
-    "payment": 124700
-  },
-  {
-    "user": 8,
-    "total": 204000,
-    "benefit": 28400,
-    "payment": 200600
-  },
-  {
-    "user": 9,
+    "badge": "산타",
     "total": 142000,
     "benefit": 31246,
     "payment": 135754
   },
   {
-    "user": 10,
+    "user": 5,
+    "badge": "없음",
     "total": 8500,
     "benefit": 0,
     "payment": 8500
   },
   {
+    "user": 6,
+    "badge": "별",
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
+  },
+  {
+    "user": 7,
+    "badge": "없음",
+    "total": 70000,
+    "benefit": 2200,
+    "payment": 67800
+  },
+  {
+    "user": 8,
+    "badge": "산타",
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
+  },
+  {
+    "user": 9,
+    "badge": "없음",
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
+  },
+  {
+    "user": 10,
+    "badge": "별",
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
+  },
+  {
     "user": 11,
+    "badge": "없음",
     "total": 70000,
     "benefit": 2200,
     "payment": 67800
   },
   {
     "user": 12,
-    "total": 142000,
-    "benefit": 31246,
-    "payment": 135754
+    "badge": "없음",
+    "total": 9000,
+    "benefit": 1000,
+    "payment": 8000
   },
   {
     "user": 13,
-    "total": 8500,
-    "benefit": 0,
-    "payment": 8500
+    "badge": "산타",
+    "total": 122000,
+    "benefit": 28123,
+    "payment": 118877
   },
   {
     "user": 14,
-    "total": 70000,
-    "benefit": 5046,
-    "payment": 64954
+    "badge": "별",
+    "total": 48000,
+    "benefit": 6246,
+    "payment": 41754
   },
   {
     "user": 15,
-    "total": 70000,
-    "benefit": 2200,
-    "payment": 67800
+    "badge": "없음",
+    "total": 74000,
+    "benefit": 1300,
+    "payment": 72700
   },
   {
     "user": 16,
-    "total": 142000,
-    "benefit": 31246,
-    "payment": 135754
+    "badge": "산타",
+    "total": 164000,
+    "benefit": 28423,
+    "payment": 160577
   },
   {
     "user": 17,
-    "total": 8500,
-    "benefit": 0,
-    "payment": 8500
+    "badge": "없음",
+    "total": 36000,
+    "benefit": 3523,
+    "payment": 32477
   },
   {
     "user": 18,
-    "total": 70000,
-    "benefit": 5046,
-    "payment": 64954
+    "badge": "없음",
+    "total": 119500,
+    "benefit": 3623,
+    "payment": 115877
   },
   {
     "user": 19,
-    "total": 70000,
-    "benefit": 2200,
-    "payment": 67800
+    "badge": "없음",
+    "total": 44000,
+    "benefit": 1700,
+    "payment": 42300
   },
   {
     "user": 20,
-    "total": 142000,
-    "benefit": 31246,
-    "payment": 135754
+    "badge": "없음",
+    "total": 103000,
+    "benefit": 3823,
+    "payment": 99177
   },
   {
     "user": 21,
-    "total": 8500,
-    "benefit": 0,
-    "payment": 8500
+    "badge": "없음",
+    "total": 106500,
+    "benefit": 2900,
+    "payment": 103600
   },
   {
     "user": 22,
-    "total": 70000,
-    "benefit": 5046,
-    "payment": 64954
+    "badge": "별",
+    "total": 85000,
+    "benefit": 6046,
+    "payment": 78954
   },
   {
     "user": 23,
-    "total": 70000,
-    "benefit": 2200,
-    "payment": 67800
+    "badge": "없음",
+    "total": 80000,
+    "benefit": 2100,
+    "payment": 77900
   },
   {
     "user": 24,
-    "total": 162000,
-    "benefit": 28400,
-    "payment": 158600
+    "badge": "없음",
+    "total": 51500,
+    "benefit": 4223,
+    "payment": 47277
   },
   {
     "user": 25,
-    "total": 69000,
-    "benefit": 5123,
-    "payment": 63877
+    "badge": "산타",
+    "total": 147000,
+    "benefit": 27300,
+    "payment": 144700
   },
   {
     "user": 26,
-    "total": 134000,
-    "benefit": 29423,
-    "payment": 129577
+    "badge": "산타",
+    "total": 230000,
+    "benefit": 33469,
+    "payment": 221531
   },
   {
     "user": 27,
-    "total": 1080000,
-    "benefit": 28400,
-    "payment": 1076600
+    "badge": "없음",
+    "total": 111000,
+    "benefit": 4523,
+    "payment": 106477
   },
   {
     "user": 28,
-    "total": 165000,
-    "benefit": 26000,
-    "payment": 164000
+    "badge": "별",
+    "total": 76500,
+    "benefit": 5623,
+    "payment": 70877
   },
   {
     "user": 29,
-    "total": 648000,
-    "benefit": 51076,
-    "payment": 621924
+    "badge": "산타",
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
   },
   {
     "user": 30,
-    "total": 1100000,
-    "benefit": 28400,
-    "payment": 1096600
+    "badge": "없음",
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
   },
   {
     "user": 31,
-    "total": 300000,
-    "benefit": 65460,
-    "payment": 259540
+    "badge": "별",
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
   },
   {
     "user": 32,
-    "total": 80000,
-    "benefit": 2900,
-    "payment": 77100
+    "badge": "없음",
+    "total": 70000,
+    "benefit": 2200,
+    "payment": 67800
   },
   {
     "user": 33,
-    "total": 96000,
-    "benefit": 3600,
-    "payment": 92400
+    "badge": "산타",
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
   },
   {
     "user": 34,
-    "total": 45000,
-    "benefit": 2400,
-    "payment": 42600
+    "badge": "없음",
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
   },
   {
     "user": 35,
-    "total": 145000,
-    "benefit": 29223,
-    "payment": 140777
+    "badge": "별",
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
   },
   {
     "user": 36,
-    "total": 30000,
-    "benefit": 6246,
-    "payment": 23754
+    "badge": "산타",
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
   },
   {
     "user": 37,
-    "total": 142000,
-    "benefit": 31246,
-    "payment": 135754
+    "badge": "없음",
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
   },
   {
     "user": 38,
-    "total": 8500,
-    "benefit": 0,
-    "payment": 8500
+    "badge": "별",
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
   },
   {
     "user": 39,
+    "badge": "없음",
     "total": 70000,
-    "benefit": 5046,
-    "payment": 64954
+    "benefit": 2200,
+    "payment": 67800
   },
   {
     "user": 40,
-    "total": 70000,
-    "benefit": 2200,
-    "payment": 67800
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 3023,
+    "payment": 1977
   },
   {
     "user": 41,
-    "total": 142000,
-    "benefit": 31246,
-    "payment": 135754
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 0,
+    "payment": 1977
   },
   {
     "user": 42,
-    "total": 8500,
+    "badge": "없음",
+    "total": 5000,
     "benefit": 0,
-    "payment": 8500
+    "payment": 1977
   },
   {
     "user": 43,
-    "total": 70000,
-    "benefit": 5046,
-    "payment": 64954
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 0,
+    "payment": 1977
   },
   {
     "user": 44,
-    "total": 70000,
-    "benefit": 2200,
-    "payment": 67800
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 0,
+    "payment": 1977
   },
   {
     "user": 45,
-    "total": 142000,
-    "benefit": 30246,
-    "payment": 136754
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 0,
+    "payment": 5000
   },
   {
     "user": 46,
-    "total": 8500,
-    "benefit": 0,
-    "payment": 8500
+    "badge": "산타",
+    "total": 145000,
+    "benefit": 28023,
+    "payment": 141977
   },
   {
     "user": 47,
-    "total": 70000,
-    "benefit": 1000,
-    "payment": 69000
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 0,
+    "payment": 1977
   },
   {
     "user": 48,
-    "total": 70000,
-    "benefit": 1200,
-    "payment": 68800
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 0,
+    "payment": 1977
   },
   {
     "user": 49,
-    "total": 142000,
-    "benefit": 30246,
-    "payment": 136754
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 0,
+    "payment": 1977
   },
   {
     "user": 50,
-    "total": 8500,
+    "badge": "없음",
+    "total": 5000,
     "benefit": 0,
-    "payment": 8500
+    "payment": 1977
   },
   {
     "user": 51,
-    "total": 70000,
-    "benefit": 1000,
-    "payment": 69000
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 0,
+    "payment": 1977
   },
   {
     "user": 52,
-    "total": 70000,
-    "benefit": 1200,
-    "payment": 68800
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 0,
+    "payment": 1977
   },
   {
     "user": 53,
-    "total": 30000,
-    "benefit": 5246,
-    "payment": 24754
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 0,
+    "payment": 1977
   },
   {
     "user": 54,
-    "total": 145000,
-    "benefit": 28223,
-    "payment": 141777
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 0,
+    "payment": 1977
   },
   {
     "user": 55,
-    "total": 142000,
-    "benefit": 31246,
-    "payment": 135754
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 0,
+    "payment": 1977
   },
   {
     "user": 56,
-    "total": 8500,
+    "badge": "없음",
+    "total": 5000,
     "benefit": 0,
-    "payment": 8500
+    "payment": 1977
   },
   {
     "user": 57,
-    "total": 70000,
-    "benefit": 5046,
-    "payment": 64954
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 0,
+    "payment": 1977
   },
   {
     "user": 58,
-    "total": 70000,
-    "benefit": 2200,
-    "payment": 67800
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 0,
+    "payment": 5000
   },
   {
     "user": 59,
-    "total": 142000,
-    "benefit": 31246,
-    "payment": 135754
+    "badge": "없음",
+    "total": 55000,
+    "benefit": 0,
+    "payment": 54000
   },
   {
     "user": 60,
-    "total": 8500,
+    "badge": "없음",
+    "total": 55000,
     "benefit": 0,
-    "payment": 8500
+    "payment": 54000
   },
   {
     "user": 61,
-    "total": 70000,
-    "benefit": 5046,
-    "payment": 64954
+    "badge": "없음",
+    "total": 55000,
+    "benefit": 0,
+    "payment": 54000
   },
   {
     "user": 62,
-    "total": 70000,
-    "benefit": 2200,
-    "payment": 67800
+    "badge": "없음",
+    "total": 55000,
+    "benefit": 0,
+    "payment": 54000
   },
   {
     "user": 63,
-    "total": 142000,
-    "benefit": 31246,
-    "payment": 135754
+    "badge": "없음",
+    "total": 55000,
+    "benefit": 0,
+    "payment": 54000
   },
   {
     "user": 64,
-    "total": 8500,
+    "badge": "없음",
+    "total": 55000,
     "benefit": 0,
-    "payment": 8500
+    "payment": 54000
   },
   {
     "user": 65,
-    "total": 70000,
-    "benefit": 5046,
-    "payment": 64954
+    "badge": "없음",
+    "total": 55000,
+    "benefit": 1000,
+    "payment": 54000
   },
   {
     "user": 66,
-    "total": 70000,
-    "benefit": 2200,
-    "payment": 67800
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 3023,
+    "payment": 1977
   },
   {
     "user": 67,
-    "total": 142000,
-    "benefit": 31246,
-    "payment": 135754
+    "badge": "없음",
+    "total": 5000,
+    "benefit": 3023,
+    "payment": 1977
   },
   {
     "user": 68,
-    "total": 8500,
+    "badge": "없음",
+    "total": 5000,
     "benefit": 0,
-    "payment": 8500
+    "payment": 5000
   },
   {
     "user": 69,
-    "total": 70000,
-    "benefit": 5046,
-    "payment": 64954
+    "badge": "없음",
+    "total": 55000,
+    "benefit": 1000,
+    "payment": 54000
   },
   {
     "user": 70,
-    "total": 70000,
-    "benefit": 2200,
-    "payment": 67800
+    "badge": "별",
+    "total": 65000,
+    "benefit": 5046,
+    "payment": 59954
   },
   {
     "user": 71,
-    "total": 142000,
-    "benefit": 31246,
-    "payment": 135754
+    "badge": "없음",
+    "total": 60000,
+    "benefit": 3023,
+    "payment": 56977
   },
   {
     "user": 72,
-    "total": 8500,
-    "benefit": 0,
-    "payment": 8500
+    "badge": "산타",
+    "total": 240000,
+    "benefit": 34092,
+    "payment": 230908
   },
   {
     "user": 73,
-    "total": 70000,
-    "benefit": 5046,
-    "payment": 64954
+    "badge": "산타",
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
   },
   {
     "user": 74,
-    "total": 70000,
-    "benefit": 2200,
-    "payment": 67800
+    "badge": "없음",
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
   },
   {
     "user": 75,
-    "total": 142000,
-    "benefit": 31246,
-    "payment": 135754
+    "badge": "별",
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
   },
   {
     "user": 76,
-    "total": 8500,
-    "benefit": 0,
-    "payment": 8500
+    "badge": "없음",
+    "total": 70000,
+    "benefit": 2200,
+    "payment": 67800
   },
   {
     "user": 77,
-    "total": 70000,
-    "benefit": 5046,
-    "payment": 64954
+    "badge": "없음",
+    "total": 60000,
+    "benefit": 3023,
+    "payment": 56977
   },
   {
     "user": 78,
-    "total": 70000,
-    "benefit": 2200,
-    "payment": 67800
+    "badge": "산타",
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
   },
   {
     "user": 79,
-    "total": 142000,
-    "benefit": 31246,
-    "payment": 135754
-  },
-  {
-    "user": 80,
+    "badge": "없음",
     "total": 8500,
     "benefit": 0,
     "payment": 8500
   },
   {
-    "user": 81,
+    "user": 80,
+    "badge": "별",
     "total": 70000,
     "benefit": 5046,
     "payment": 64954
   },
   {
-    "user": 82,
+    "user": 81,
+    "badge": "없음",
     "total": 70000,
     "benefit": 2200,
     "payment": 67800
   },
   {
-    "user": 83,
-    "total": 15000,
-    "benefit": 4223,
-    "payment": 10777
-  },
-  {
-    "user": 84,
-    "total": 145000,
-    "benefit": 29223,
-    "payment": 140777
-  },
-  {
-    "user": 85,
-    "total": 145000,
-    "benefit": 29223,
-    "payment": 140777
-  },
-  {
-    "user": 86,
-    "total": 145000,
-    "benefit": 29223,
-    "payment": 140777
-  },
-  {
-    "user": 87,
-    "total": 145000,
-    "benefit": 29223,
-    "payment": 140777
-  },
-  {
-    "user": 88,
-    "total": 145000,
-    "benefit": 29223,
-    "payment": 140777
-  },
-  {
-    "user": 89,
+    "user": 82,
+    "badge": "산타",
     "total": 142000,
     "benefit": 31246,
     "payment": 135754
   },
   {
-    "user": 90,
+    "user": 83,
+    "badge": "없음",
     "total": 8500,
     "benefit": 0,
     "payment": 8500
   },
   {
-    "user": 91,
+    "user": 84,
+    "badge": "별",
     "total": 70000,
     "benefit": 5046,
     "payment": 64954
   },
   {
+    "user": 85,
+    "badge": "없음",
+    "total": 70000,
+    "benefit": 2200,
+    "payment": 67800
+  },
+  {
+    "user": 86,
+    "badge": "산타",
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
+  },
+  {
+    "user": 87,
+    "badge": "없음",
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
+  },
+  {
+    "user": 88,
+    "badge": "별",
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
+  },
+  {
+    "user": 89,
+    "badge": "없음",
+    "total": 70000,
+    "benefit": 2200,
+    "payment": 67800
+  },
+  {
+    "user": 90,
+    "badge": "산타",
+    "total": 142000,
+    "benefit": 31246,
+    "payment": 135754
+  },
+  {
+    "user": 91,
+    "badge": "없음",
+    "total": 8500,
+    "benefit": 0,
+    "payment": 8500
+  },
+  {
     "user": 92,
+    "badge": "별",
+    "total": 70000,
+    "benefit": 5046,
+    "payment": 64954
+  },
+  {
+    "user": 93,
+    "badge": "없음",
     "total": 70000,
     "benefit": 2200,
     "payment": 67800

@@ -1,4 +1,4 @@
-import { BADGES, DISCOUNT_PRICES, GIVEAWAYS } from '../constants/events.js';
+import { BADGES, GIVEAWAYS } from '../constants/events.js';
 import { NONE } from '../constants/system.js';
 import menuPriceFinder from '../utils/menuPriceFinder.js';
 import Benefit from './Benefit.js';
@@ -15,7 +15,10 @@ class EventPlanner {
     this.discount = new Discount(visitDate, dayIndex, orderList);
     this.#preTotalPrice = this.#setPreTotalPrice(orderList);
     this.isFitGiveaway = this.#checkIsFitGiveAway();
-    this.#benefit = new Benefit(this.discount, this.isFitGiveaway);
+    this.#benefit = new Benefit(
+      this.discount.getDiscounts(this.#preTotalPrice),
+      this.isFitGiveaway,
+    );
   }
 
   /**
@@ -61,11 +64,15 @@ class EventPlanner {
   }
 
   getBenefitList() {
-    return this.#benefit.getList();
+    const benefitList = this.#benefit.getList();
+
+    return benefitList.length ? benefitList : NONE;
   }
 
   getTotalBenefitPrice() {
-    return this.#benefit.getTotalPrice();
+    this.#totalBenefitPrice = this.#benefit.getTotalPrice();
+
+    return this.#totalBenefitPrice;
   }
 
   /**
@@ -75,7 +82,6 @@ class EventPlanner {
   getTotalPrice() {
     const totalDiscountPrice = this.discount.getTotalDiscountPrice();
 
-    if (totalDiscountPrice === DISCOUNT_PRICES.none) return this.#preTotalPrice;
     return this.#preTotalPrice - totalDiscountPrice;
   }
 
@@ -92,7 +98,7 @@ class EventPlanner {
       case this.#totalBenefitPrice > BADGES.star.price:
         return BADGES.star.title;
       default:
-        return BADGES.none;
+        return NONE;
     }
   }
 }

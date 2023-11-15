@@ -47,7 +47,7 @@ const OutputView = {
   printList(title, list, message) {
     this.print(`${title}`);
 
-    if (list === NONE) return this.print(NONE, SYMBOLS.blank);
+    if (list === NONE) return this.print(`${NONE}\n`);
 
     list.forEach(item => {
       this.print(message(item));
